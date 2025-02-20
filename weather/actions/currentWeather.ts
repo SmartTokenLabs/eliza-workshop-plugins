@@ -52,9 +52,6 @@ export const currentWeather: Action = {
                 stop: ["\n"]
             })
 
-            if (state.recentMessagesData.length)
-                state.recentMessagesData[state.recentMessagesData.length - 1].content.text = "";
-
             await callback({
                 text: responseText,
             });
